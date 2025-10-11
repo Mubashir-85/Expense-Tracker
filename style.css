@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #919191;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.container{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.expense-inputs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    /* background-color: black; */
+    /* justify-content: space-evenly; */
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+.expense-inputs input, .add-btn{
+    width: 100%;
+    margin-top: 20px;
+
+    padding: 2px;
+}
+input{
+    border:none;
+    outline: none;
+    height: 3vh;
+
+}
+input:focus{
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+.expense-list {
+  list-style-type: none; /* ❌ removes bullet points */
+  padding: 0;
+  margin-top: 25px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 8px 0;
+  font-size: 16px;
+}
