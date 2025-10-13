@@ -41,6 +41,9 @@ btn.addEventListener("click",()=>{
 })
 // const deleteExpense = querySelector(".deleteExpense  ")
 function deleteExpense(index){
+    if(!confirm("Are you sure you want to delete this expense?")){
+        return;
+    }
     expense.splice(index,1);
     renderexpense();
 
