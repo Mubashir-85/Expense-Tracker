@@ -24,6 +24,11 @@ function renderexpense  (){
     });
     totalamt.textContent = total;
     localStorage.setItem("expenses",JSON.stringify(expense))
+    if(total >= 10000){
+        totalamt.style.color = "red";
+    }else{
+    totalamt.style.color = "green";
+}
 }
 
 // Add new expense
@@ -48,4 +53,5 @@ function deleteExpense(index){
     renderexpense();
 
 }
+
 renderexpense();
