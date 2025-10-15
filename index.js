@@ -5,7 +5,7 @@ const list = document.querySelector(".expense-list");
 const totalamt = document.querySelector(".total-expense")
 
 
-let expense = JSON.parse(localStorage.getItem("expenses")) || [];
+let expense = JSON.parse(localStorage.getItem("expenses")) || []; // try to load the existing expenses from localstorage. If nothing is saved yet, start with an empty array
 
 //Function to render expenses
 function renderexpense  (){
@@ -33,8 +33,8 @@ function renderexpense  (){
 
 // Add new expense
 btn.addEventListener("click",()=>{
-    const title = expensetitle.value.trim();
-    const amount = parseFloat(expenseamount.value);
+    const title = expensetitle.value.trim();// In this line the value will return a string and trim() will remove any extra spaces
+    const amount = parseFloat(expenseamount.value);// In this line the value will return a string and parseFloat() will convert it to a number
     if(title === ""|| amount <= 0){
         alert("please enter a valid title and amount!")
         return;
