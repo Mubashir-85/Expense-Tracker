@@ -3,6 +3,11 @@ const expenseamount = document.querySelector(".amount");
 const btn = document.querySelector(".add-btn");
 const list = document.querySelector(".expense-list");
 const totalamt = document.querySelector(".total-expense")
+const budget = document.querySelector(".budget");
+// budget.addEventListener("input",()=>{
+//     renderexpense();
+// });
+console.log(budget.value);
 
 
 let expense = JSON.parse(localStorage.getItem("expenses")) || []; // try to load the existing expenses from localstorage. If nothing is saved yet, start with an empty array
@@ -24,7 +29,7 @@ function renderexpense  (){
     });
     totalamt.textContent = total;
     localStorage.setItem("expenses",JSON.stringify(expense))
-    if(total >= 10000){
+    if(total >= budget.value){
         totalamt.style.color = "red";
     }else{
     totalamt.style.color = "green";
